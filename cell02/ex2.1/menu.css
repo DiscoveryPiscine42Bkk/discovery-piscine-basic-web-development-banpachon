@@ -1,0 +1,74 @@
+body {
+  background: linear-gradient(120deg, #f8ffae 0%, #43c6ac 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.sandwich-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.sandwich-btn {
+  background: linear-gradient(90deg, #ffe5b4 0%, #f7c873 100%);
+  color: #6b3e26;
+  padding: 18px 44px;
+  font-size: 1.3em;
+  border: none;
+  border-radius: 30px 30px 18px 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: background 0.3s;
+  user-select: none;
+}
+
+.sandwich-menu:hover .sandwich-dropdown,
+.sandwich-menu:focus-within .sandwich-dropdown {
+  display: block;
+  animation: fadeIn 0.3s;
+}
+
+.sandwich-dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  min-width: 220px;
+  background: #fffbe6;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  z-index: 1;
+  padding: 0;
+  margin-top: 2px;
+  border: 2px solid #eab676;
+  border-top: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.sandwich-dropdown li {
+  list-style: none;
+  padding: 16px 28px;
+  color: #6b3e26;
+  font-size: 1.1em;
+  border-bottom: 1px solid #ffe5b4;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.sandwich-dropdown li:last-child {
+  border-bottom: none;
+}
+
+.sandwich-dropdown li:hover {
+  background: #ffe5b4;
+  color: #b85c38;
+}
